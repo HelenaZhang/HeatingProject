@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatObjectCodeClassLibrary"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatingProject.Objects", "HeatingProject.Objects\HeatingProject.Objects.csproj", "{B07D3341-4A64-4CA0-8840-A34DF3FABB47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatingProject.Tests", "HeatingProject.Tests\HeatingProject.Tests.csproj", "{1AD39A56-A32E-4D0D-8A17-15603C9DAB4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B07D3341-4A64-4CA0-8840-A34DF3FABB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B07D3341-4A64-4CA0-8840-A34DF3FABB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B07D3341-4A64-4CA0-8840-A34DF3FABB47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD39A56-A32E-4D0D-8A17-15603C9DAB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD39A56-A32E-4D0D-8A17-15603C9DAB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD39A56-A32E-4D0D-8A17-15603C9DAB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD39A56-A32E-4D0D-8A17-15603C9DAB4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

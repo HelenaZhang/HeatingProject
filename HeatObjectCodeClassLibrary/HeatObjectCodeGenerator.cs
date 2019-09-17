@@ -6,7 +6,8 @@ namespace HeatObjectCodeClassLibrary
 
     public static class HeatObjectCodeGenerator
     {
-        private const short maxCountOfDigits = 18;
+        public const short maxCountOfDigits = 18;
+        public const short maxNameHexLength = 6;
 
         private static void checkStr(string str, string paramName, string message)
         {
@@ -62,20 +63,18 @@ namespace HeatObjectCodeClassLibrary
 
         public static string GetHexCode(HeatObject heatObject)
         {
-            const short maxNameLength = 6;
-
             checkStr(heatObject.objName, "Наименование объекта", "Наименование объекта не может быть пусто");
 
             var dateNum = heatObject.registryDate.Month * 100 + short.Parse(heatObject.registryDate.ToString("yy"));
             var dateStr = dateNum.ToString("X");
 
-            var nameStr = heatObject.objName.Length > maxNameLength
-                ? heatObject.objName.Remove(maxCountOfDigits)
+            var nameStr = heatObject.objName.Length > maxNameHexLength
+                ? heatObject.objName.Remove(maxNameHexLength)
                 : heatObject.objName;
 
             var personalAccStr = heatObject.personalAccount.ToString();
-            personalAccStr = personalAccStr.Length > maxNameLength
-                ? personalAccStr.Remove(maxNameLength)
+            personalAccStr = personalAccStr.Length > maxNameHexLength
+                ? personalAccStr.Remove(maxNameHexLength)
                 : personalAccStr;
 
             return $"H{nameStr}-{personalAccStr}-{dateStr}";
