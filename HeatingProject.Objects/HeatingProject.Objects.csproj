@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{13ABB485-A1C6-41F7-A4FA-F4E358B0AE65}</ProjectGuid>
+    <ProjectGuid>{B07D3341-4A64-4CA0-8840-A34DF3FABB47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HeatObjectCodeClassLibrary</RootNamespace>
-    <AssemblyName>HeatObjectCodeClassLibrary</AssemblyName>
+    <RootNamespace>HeatingProject.Objects</RootNamespace>
+    <AssemblyName>HeatingProject.Objects</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HeatObjectCodeGenerator.cs" />
+    <Compile Include="HeatObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HeatingProject.Objects\HeatingProject.Objects.csproj">
-      <Project>{b07d3341-4a64-4ca0-8840-a34df3fabb47}</Project>
-      <Name>HeatingProject.Objects</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
