@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Получить код";
+}
+
+<h2>Введите следующую информацию:</h2>
+<form method="post">
+    <label for="name"><b>Наименование объекта теплопотребления</b></label>
+    <input id="name" class="form-control input-sm" type="text" placeholder="Введите имя" name ="objName" value ="@ViewBag.ObjName">
+
+    @* Календаря по умолчанию нет, поэтому пусть будет текстовое поле *@
+    <label for="datereg"><b>Дата регистрации</b></label>
+    <input id="datereg" class="form-control input-sm" type="text" placeholder="Введите дату" name="regDate" value ="@ViewBag.RegDate">
+
+    <label for="account"><b>Лицевой счет</b></label>
+    <input id="account" class="form-control input-sm" type="text" placeholder="Введите счет" name="persAcc" value ="@ViewBag.PersAcc">
+    <label class="mr-sm-2" for="type">Выберите алгоритм:</label>
+    <select id="type" name="algoType">
+        <option selected>Simple</option>
+        <option>Hex</option>
+    </select>
+
+    <br />
+    <button type="submit" id="getCode" class="btn btn-default">Получить код</button>
+</form>
+
+<hr/>
+<form method="get">
+    <label for="answer"><b>Полученный код</b></label>
+    <input id="answer" class="form-control input-sm" type="text" name="answerCode" value="@ViewBag.Answer">
+</form>
+
+
